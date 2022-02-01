@@ -36,7 +36,7 @@ export const EditRequest = ({ editReq }) => {
         setProductImage([...productImage, e.target.files[0]]);
     }
 
-    const updatedRequest = () => {
+    const updatedRequest = (e) => {
 
         const form = new FormData();
 
@@ -55,6 +55,7 @@ export const EditRequest = ({ editReq }) => {
         }
 
         dispatch(upRequest(form));
+        e.preventDefault();
     }
 
     return (
