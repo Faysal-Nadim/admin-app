@@ -34,8 +34,8 @@ export const EditRequest = ({ editReq }) => {
     setProductImage([...productImage, e.target.files[0]]);
   };
 
-  const updatedRequest = () => {
-    const form = new FormData(e);
+  const updatedRequest = (e) => {
+    const form = new FormData();
 
     form.append("_id", _id);
     form.append("freightCat", freightCat);
@@ -52,6 +52,7 @@ export const EditRequest = ({ editReq }) => {
     }
 
     dispatch(upRequest(form));
+    e.preventDefault();
   };
 
   return (
