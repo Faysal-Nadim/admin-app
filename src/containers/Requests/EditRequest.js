@@ -52,7 +52,6 @@ export const EditRequest = ({ editReq }) => {
     }
 
     dispatch(upRequest(form));
-    e.preventDefault();
   };
 
   return (
